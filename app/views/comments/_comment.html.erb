@@ -1,0 +1,12 @@
+<p>
+  <strong>Author:</strong>
+  <%= comment.author %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= comment.body %>
+</p>
+
+<div>
+  <%= button_to "Delete this comment", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" }%>
+</div>

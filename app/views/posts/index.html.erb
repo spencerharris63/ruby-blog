@@ -1,0 +1,19 @@
+
+<p style="color: green"><%= notice %></p>
+
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <strong>Comments:</strong>
+      <%= post.comments.count %>
+    </p>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Create new post", new_post_path %> 
+
